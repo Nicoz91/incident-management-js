@@ -55,16 +55,22 @@
             }
           }
         }
+        ,
+        "API_BUSINESS_PARTNER": {
+          "kind": "odata-v2",
+          "model": "srv/external/API_BUSINESS_PARTNER"
+        }
       },
       "[production]": {
         "db": "hana",
-        "auth": "xsuaa"
-      },
-      "API_BUSINESS_PARTNER": {
-        "kind": "odata-v2",
-        "model": "srv/external/API_BUSINESS_PARTNER",
-        "credentials": {
-          "url": "https://sandbox.api.sap.com/s4hanacloud/sap/opu/odata/sap/API_BUSINESS_PARTNER/"
+        "auth": "xsuaa",
+        "API_BUSINESS_PARTNER": {
+          "kind": "odata-v2",
+          "model": "srv/external/API_BUSINESS_PARTNER",
+          "credentials": { 
+            "destination": "Incident-Management-Mock-Destination",
+            "path": "odata/v2/api-business-partner"
+          }
         }
       },
       "html5-repo": true,
