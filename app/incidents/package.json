@@ -29,6 +29,5 @@
       "@sap/ui5-builder-webide-extension",
       "mbt"
     ]
-  },
-  "private": true
+  }
 }
