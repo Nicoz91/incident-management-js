@@ -18,7 +18,7 @@
   "devDependencies": {
     "@cap-js/cds-types": "^0.6",
     "@cap-js/sqlite": "^1",
-    "@sap/cds-dk": "^8",
+    "@sap/cds-dk": "^8.7.1",
     "@sap/ux-specification": "^1.120.16",
     "axios": "^1.7.4",
     "chai": "^4.5.0",
@@ -29,7 +29,8 @@
   "scripts": {
     "start": "cds-serve",
     "watch-incidents": "cds watch --open incidents/webapp/index.html?sap-ui-xx-viewCache=false",
-    "test": "jest tests/test.js"
+    "test": "jest tests/test.js",
+    "cds-build": "npm install --include=dev && cds build --production"
   },
   "cds": {
     "requires": {
@@ -54,8 +55,7 @@
               ]
             }
           }
-        }
-        ,
+        },
         "API_BUSINESS_PARTNER": {
           "kind": "odata-v2",
           "model": "srv/external/API_BUSINESS_PARTNER"
@@ -67,7 +67,7 @@
         "API_BUSINESS_PARTNER": {
           "kind": "odata-v2",
           "model": "srv/external/API_BUSINESS_PARTNER",
-          "credentials": { 
+          "credentials": {
             "destination": "Incident-Management-Mock-Destination",
             "path": "odata/v2/api-business-partner"
           }
